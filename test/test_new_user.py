@@ -1,3 +1,4 @@
+import pytest
 from unittest import TestCase
 import api
 
@@ -5,5 +6,6 @@ import api
 class TestNew_user(TestCase):
 
     def test_new_user(self):
-        if not api.new_user("huangzp"):
-            self.fail()
+        self.assertIsNotNone(api.new_user("huangzp"))
+
+
